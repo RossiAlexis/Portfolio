@@ -1,12 +1,89 @@
 ---
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
 import Layout from "../layouts/Layout.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Porfolio de Alexis - Desarrollador y Programador Web con 7 años de experiencia"
+  description="Contrata a Alexis Rossi para crear tu aplicación web o móvil. Desarrollador Web . Especializado en crear aplicaciones únicas."
 >
-  <main class="px-4">
-    <h1>Hi Astroß</h1>
+  <main class="px-4 h-[1100px]">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full w-12 h-10 mb-4"
+        src="/alexis-profile.webp"
+        alt="Alexis photo"
+      />
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hello, I'm Alexis Rossi<a
+          href="https://www.linkedin.com/in/alexis-rossi-30091714b/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Open to work</Badge>
+        </a>
+      </h1>
+      <h2
+        class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
+      >
+        <!-- <span></span> -->
+        <span class="text-yellow-800 dark:text-yellow-200"
+          >Software developer with +7 years of experience.
+        </span>
+        <br />
+        <span class="text-red-800 dark:text-red-200">
+          Argentinian 🇦🇷 living in Canadá 🇨🇦.
+        </span>
+        <br />
+        <span class="text-sky-800 dark:text-sky-200"
+          >I help people make the world a better place through quality software.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/midudev">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/midudev">
+          <GitHub class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:alexisjrossi@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          alexisjrossi@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
   </main>
 </Layout>

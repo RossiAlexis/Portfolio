@@ -1,0 +1,45 @@
+---
+import Remix from "./icons/Remix.astro";
+
+const TAGS = {
+  REMIX: {
+    name: "Remix.js",
+    class: "bg-black text-white",
+    icon: Remix,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Resume administrator",
+    description:
+      "Created to add more experience and information about me profile and experience to this page",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    // image: "/projects/svgl.webp",
+    tags: [TAGS.REMIX],
+  },
+];
+---
+
+{
+  PROJECTS.map(({  title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+    </article>
+  ))
+}

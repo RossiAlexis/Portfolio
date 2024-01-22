@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  //   {
+  //     date: "Actualmente...",
+  //     title: "Creador de Contenido − Twitch",
+  //     description:
+  //       "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
+  //     link: "https://twitch.tv/midudev",
+  //   },
+  {
+    date: "Noviembre 2020",
+    title: "Semi senior advanced fullstack developer − Flexiti Canadá",
+    description:
+      "Hacia cosas muy locas, Lexi me arruino de la cabeza y mobile facade me daba acidez. Era joven y necesitaba el dinero.",
+  },
+  {
+    date: "Noviembre 2020",
+    title: "Semi senior advanced fullstack developer − Flexiti Canadá",
+    description:
+      "Hacia cosas muy locas, Lexi me arruino de la cabeza y mobile facade me daba acidez. Era joven y necesitaba el dinero.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

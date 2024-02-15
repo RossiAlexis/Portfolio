@@ -1,12 +1,16 @@
 ---
 interface Props {
   title: string;
-  description: string;
+  description?: string;
+  city: string;
+  country: string;
   link?: string;
-  date: string;
+  startDate: string;
+  endDate: string;
 }
 
-const { title, description, link, date } = Astro.props;
+const { title, description, link, startDate, city, country, endDate } =
+  Astro.props;
 ---
 
 <div
@@ -15,10 +19,17 @@ const { title, description, link, date } = Astro.props;
 </div>
 <time
   class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
-  >{date}</time
 >
+  {startDate} - {endDate}
+</time>
 <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2">
   {title}
+</h3>
+<h3
+  class="text-base font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+>
+  {city},
+  {country}
 </h3>
 <p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty">
   {description}
